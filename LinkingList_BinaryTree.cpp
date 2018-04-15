@@ -10,7 +10,7 @@ typedef struct danhba{
 }danhba;
 //khai bao cau truc 1 node
 typedef struct node{
-	danhba data;// du lieu cua node ==> du lieu m‡ node se luu tru
+	danhba data;// du lieu cua node ==> du lieu m√† node se luu tru
 	struct node *left;//node lien ket ben trai cua cay<=> cay con ben trai
 	struct node *right;//node lien ket ben phai cua cay<=> cay con ben phai
 }node;
@@ -20,7 +20,7 @@ typedef struct node*tree;
 void taocay(tree&t){
 	t=NULL;//cay rong
 }
-//Ham nhap v‡o thÙng tin danh ba
+//Ham nhap v√†o th√¥ng tin danh ba
 void nhapthongtin(danhba &x){
 	//nhap vao ho ten
 		printf("\nNhap ho ten: ");
@@ -194,7 +194,7 @@ node *timtheoten(tree&t, char hoten[50]){
     return NULL;
 }
 
-//c‚p nh‚t lai dia chi cua 1 kh·ch khi thay doi dia chi
+//c√¢p nh√¢t lai dia chi cua 1 kh√°ch khi thay doi dia chi
 void capnhat(tree &t){
     char tencancapnhat[50];
 	printf("\n Nhap vao ten nguoi can cap nhat lai quan he: ");
@@ -210,7 +210,7 @@ void capnhat(tree &t){
     	printf("\nDanh ba sau khi cap nhat la : ");
     	NLR(t);// xuat cay kieu NLR
 	}
-	else printf("\nTen khach hang khong ton tai");
+	else printf("\nTen khong ton tai");
 }
 //liet ke thong tin theo tung mien
 //liet ke thong tin mien bac
@@ -301,7 +301,7 @@ do{
             gets(y);
             node*k=timtheoten(t,y);//tao node de goi ham tim kiem thong tin
             if(k==NULL)
-            printf("\nthong tin khach hang co ten vua nhap khong co trong danh ba");
+            printf("\nThong tin nguoi co ten vua nhap khong co trong danh ba");
             break;}
             
         case 4: {
@@ -314,14 +314,14 @@ do{
         case 5:      	 {
         	 char a[12];
             fflush(stdin);
-            printf("\nMoi ban nhap vao sdt cua khach hang can xoa: ");
+            printf("\nMoi ban nhap vao sdt cua nguoi can xoa: ");
             gets(a);
             xoanode(t,a);
             break;}
         case 6:{
         	char a[12];
             fflush(stdin);
-            printf("\nMoi ban nhap vao ho ten cua khach hang can xoa: ");
+            printf("\nMoi ban nhap vao ho ten cua nguoi can xoa: ");
             gets(a);
             xoanode_hoten(t,a);
             break;
