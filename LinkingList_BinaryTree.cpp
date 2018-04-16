@@ -81,12 +81,34 @@ void nhapcay(tree&t){
 		}
 	}while(luachon!=0);
 }
-
+void form()
+{
+	printf("\n+---------------+-------------------+----------------------------+");
+	printf("\n|      HO TEN   |       SDT         |           Quan he          |");	
+    printf("\n+---------------+-------------------+----------------------------+\n");
+}
 //ham xuat ra thong tin
 void xuatthongtin(danhba x){
-		printf("\n Ho ten      So dien thoai      Quan he ");
-	printf("\n %-10s|%15s|%10d  ",x.hoten,x.sdt,x.quanhe);
+	switch(x.quanhe)
+	{
+		case 1:{
+	 		printf("|%-15s|%-19s|Gia dinh                    |\n",x.hoten,x.sdt);
+	 		 printf("+---------------+-------------------+----------------------------+\n");
+			break;
+		}
+		case 2:{
+			printf("|%-15s|%-19s|Ban be                      |\n",x.hoten,x.sdt);
+			 printf("+---------------+-------------------+----------------------------+\n");
+			break;
+		}
+		case 3:{
+			printf("|%-15s|%-19s|Dong nghiep                 |\n",x.hoten,x.sdt);
+			 printf("+---------------+-------------------+----------------------------+\n");
+			break;
+		}
+	}
 	
+   
 }
 //duyet cay co 3 cach duyet cay
 //duyet truoc
@@ -334,7 +356,8 @@ do{
 			break;}
 		case 9:
 			{
-			NLR(t);
+			form();//goi ham form tao bang cho danh ba
+		   	NLR(t);
 			break;}
 	}
   }while(chon!=0);
